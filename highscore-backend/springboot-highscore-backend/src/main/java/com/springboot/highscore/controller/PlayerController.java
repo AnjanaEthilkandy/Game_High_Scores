@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springboot.highscore.entity.Player;
+import com.springboot.highscore.exception.ResourceNotFoundException;
 import com.springboot.highscore.repository.PlayerRepository;
 
 @CrossOrigin
@@ -22,6 +23,9 @@ public class PlayerController {
 	
 	@GetMapping("/players/{category}")
 	public List<Player> getPlayersByCategory(@PathVariable String category) {
+		if(category == "") {
+			throw new ResourceNotFoundException("Resource not found");
+		}
 		if(category.equalsIgnoreCase("OverAll")) {
 			return playerRepository.findTop10ByOrderByScoreDesc();
 		} else {
