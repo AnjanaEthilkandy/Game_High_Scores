@@ -1,0 +1,90 @@
+package com.springboot.highscore.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "employee")
+public class Player {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long playerId;
+	
+	@Column(name = "player_name")
+	private String playerName;
+	
+	@Column(name = "level")
+	private long level;
+	
+	@Column(name = "score")
+	private long score;
+	
+	@Column(name = "category")
+	private String category;
+
+	public Player() {
+
+	}
+
+	public Player(Integer playerId, String playerName, Integer level, Integer score, String category) {
+		super();
+		this.playerId = playerId;
+		this.playerName = playerName;
+		this.level = level;
+		this.score = score;
+		this.category = category;
+	}
+
+	public Integer getPlayerId() {
+		return playerId;
+	}
+
+	public void setPlayerId(Integer playerId) {
+		this.playerId = playerId;
+	}
+
+	public String getPlayerName() {
+		return playerName;
+	}
+
+	public void setPlayerName(String playerName) {
+		this.playerName = playerName;
+	}
+
+	public Integer getLevel() {
+		return level;
+	}
+
+	public void setLevel(Integer level) {
+		this.level = level;
+	}
+
+	public Integer getScore() {
+		return score;
+	}
+
+	public void setScore(Integer score) {
+		this.score = score;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	@Override
+	public String toString() {
+		return "Player [playerId=" + playerId + ", playerName=" + playerName + ", level=" + level + ", score=" + score
+				+ ", category=" + category + "]";
+	}
+
+	
+}

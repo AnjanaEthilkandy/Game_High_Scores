@@ -1,0 +1,5 @@
+package com.springboot.highscore.entity;
+
+public class Player {
+
+}

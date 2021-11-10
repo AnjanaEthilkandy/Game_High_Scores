@@ -1,0 +1,5 @@
+package com.springboot.highscore.modal;
+
+public class Player {
+
+}

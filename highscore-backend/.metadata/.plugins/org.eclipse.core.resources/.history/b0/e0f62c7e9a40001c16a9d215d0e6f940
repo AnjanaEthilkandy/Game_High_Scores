@@ -1,0 +1,24 @@
+package com.springboot.highscore;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+@SpringBootApplication
+public class SpringbootHighscoreBackendApplication /* implements CommandLineRunner */ {
+
+	/*
+	 * @Autowired private PlayerRepository playerRepository;
+	 */
+	
+	public static void main(String[] args) {
+		System.out.println("hello");
+		SpringApplication.run(SpringbootHighscoreBackendApplication.class, args);
+	}
+
+	/*
+	 * @Override public void run(String... args) throws Exception {
+	 * playerRepository.save(new Player(1,"Anjana",2,1200,"Defense")); }
+	 */
+
+}

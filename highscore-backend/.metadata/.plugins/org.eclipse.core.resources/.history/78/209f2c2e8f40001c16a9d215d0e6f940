@@ -1,0 +1,5 @@
+package com.springboot.highscore.exception;
+
+public class ResourceNotFoundException extends RuntimeException {
+
+}

@@ -1,0 +1,13 @@
+package com.springboot.highscore.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.springboot.highscore.entity.Player;
+
+@Repository
+public interface PlayerRepository extends JpaRepository<Player, Integer> {
+	
+	List<Player> findByCategory(String name);
+
+}

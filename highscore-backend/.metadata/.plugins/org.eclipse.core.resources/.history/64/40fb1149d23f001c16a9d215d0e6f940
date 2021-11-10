@@ -1,0 +1,26 @@
+package com.springboot.highscore.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Player {
+
+	@Id
+	@GeneratedValue
+	private Integer playerId;
+	
+	private String playerName;
+	
+	private Integer level;
+	
+	private Integer score;
+	
+	private String category
+
+	public Player() {
+
+	}
+
+}
